@@ -1,9 +1,9 @@
 project('real-engine', 'cpp',
   version : '0.1',
   default_options : ['warning_level=3'],
-  cpp_std: 'c++17')
+  cpp_std: 'c++20')
 
-exe = executable('real-engine', 'real_engine.cpp',
+exe = executable('madlock-engine', 'madlock.cpp',
   install : true)
 
 test('basic', exe)
