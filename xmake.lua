@@ -1,6 +1,11 @@
+add_requires("glfw", "miniaudio", "vulkansdk", "asio", "boost")
 target("madlock")
-    set_kind("binary")
-    add_files("madlock.cpp")
+set_kind("binary")
+
+add_files("src/madlock.cpp")
+add_includedirs("include")
+set_warnings("all", "error")
+set_languages("c++20")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
@@ -70,4 +75,3 @@ target("madlock")
 --
 -- @endcode
 --
-
