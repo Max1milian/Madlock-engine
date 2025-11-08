@@ -1,4 +1,4 @@
-add_requires("glfw", "miniaudio", "vulkansdk", "asio", "boost")
+add_requires("glfw", "miniaudio", "vulkansdk", "glad", "asio", "boost")
 target("madlock")
 set_kind("binary")
 
@@ -6,7 +6,7 @@ add_files("src/madlock.cpp")
 add_includedirs("include")
 set_warnings("all", "error")
 set_languages("c++20")
-
+add_cxflags("-fanalyzer")
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
